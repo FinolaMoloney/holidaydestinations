@@ -1,13 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
 import Hotels from './views/Hotels';
+import Home from './views/Home';
+import Navbar from './components/Navbar'
 
 function App() {
   return (
-    <div>
-      <Hotels />
-    </div>
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/hotels">
+           <Hotels />
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 
