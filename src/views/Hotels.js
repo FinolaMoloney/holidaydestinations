@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
-import '../components/Home.css'
+import '../components/Hotel.css'
+
 
 function Hotels(){
 
@@ -44,20 +45,20 @@ function Hotels(){
     };
     ParisImage();
   }, []);
-  
+
   return (
     <div>
-      <div className="header">
-        <h1>Hotels for all your city breaks</h1>
-      </div>
-      <div class="container-fluid gradient-1">
+      <header className="header">
+        <h1 className="header-title">Find your perfect City Break Hotel</h1>
+      </header>
+      <div className="container-fluid gradient-1">
         <p>Need hotel suggestions? You have come to the right place! See below a list of hotels for your city break destination. We've done the hard work for you and compiled a list of hotels in popular destinations. All you need to do is pick your favourite!!</p>
         <h1>Hotels in New York City</h1>
-        <div class="row">
-            <div class="col-sm">
+        <div className="row">
+            <div className="col-sm">
             {newYorkCity && <img src={newYorkCity} alt="New York City" />}<a href= "https://pixabay.com/photos/buildings-skyline-city-cityscape-1850129/"><br/>Source: https://pixabay.com/photos/buildings-skyline-city-cityscape-1850129/</a>
           </div>
-          <div class="col-sm">
+          <div className="col-sm">
           {newYork.map((newYork, index) => (
           <div key={index} >
             <ul>
@@ -69,11 +70,11 @@ function Hotels(){
           </div>
         </div>
         <h1>Hotels in Paris</h1>
-        <div class="row">
-          <div class="col-sm">
+        <div className="row">
+          <div className="col-sm">
           {parisImage && <img src={parisImage} alt="Paris" />}<a href= "https://pixabay.com/photos/eiffel-tower-paris-france-3349075/"><br/>Source: https://pixabay.com/photos/eiffel-tower-paris-france-3349075/</a>
           </div>
-          <div class="col-sm">
+          <div className="col-sm">
           {paris.map((paris, index) => (
             <div key={index}>
               <ul>
