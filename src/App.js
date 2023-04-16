@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import './App.css';
 import Hotels from './views/Hotels';
 import Home from './views/Home';
+import Contact from './views/Contact'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
           </Route>
           <Route path="/hotels">
            <Hotels />
+          </Route>
+          <Route path="/contact">
+           <Contact />
           </Route>
         </Switch>
 

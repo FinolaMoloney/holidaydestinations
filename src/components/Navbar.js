@@ -13,6 +13,9 @@ function Navbar() {
           <li className="nav-item">
             <a className="nav-link" href="/hotels">Hotels</a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/contact">Contact Us</a>
+          </li>
         </ul>
       </div>
     </nav>
