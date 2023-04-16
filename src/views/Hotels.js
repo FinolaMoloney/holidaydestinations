@@ -51,7 +51,7 @@ function Hotels(){
       <header className="header">
         <h1 className="header-title">Find your perfect City Break Hotel</h1>
       </header>
-      <div className="container-fluid gradient-1">
+      <div className="container-fluid">
         <p>Need hotel suggestions? You have come to the right place! See below a list of hotels for your city break destination. We've done the hard work for you and compiled a list of hotels in popular destinations. All you need to do is pick your favourite!!</p>
         <h1>Hotels in New York City</h1>
         <div className="row">

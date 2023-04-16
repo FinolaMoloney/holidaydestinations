@@ -6,3 +6,12 @@
     display:flex;
    
 }
+
+.button {
+    border-radius: 8px;
+}
+
+.button:hover {
+    background-color: #242323; /* Green */
+    color: white;
+  }
