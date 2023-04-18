@@ -11,14 +11,16 @@ function Contact() {
     const [inputErrors, setInputErrors] = useState({});
 
     function onSubmit(data) {
-        const errors = {};
+        const validate = {};
         let hasErrors = false;
+    
         if (data.firstName === "" || data.lastName === "" || data.email ==="" || data.message === "") {
-          errors.message = "Please fill in all fields before submitting";
+          validate.message = "Please fill in all fields before submitting";
           hasErrors = true;
+      
         }
         if (hasErrors) {
-            setInputErrors(errors);
+            setInputErrors(validate);
         } else {
             setFormSubmitted(true);
             setUserEmail(data.email);
