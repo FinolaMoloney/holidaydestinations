@@ -6,12 +6,29 @@
     display:flex;
    
 }
+.headerContact {
+    background-image: url('../images/contact-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    justify-content:center;
+    align-items: center;
+    display:flex;
+}
+
+.contact-form{
+    display:table;
+    margin:auto
+}
 
 .button {
     border-radius: 8px;
 }
 
 .button:hover {
-    background-color: #242323; /* Green */
+    background-color: #242323;
     color: white;
   }
