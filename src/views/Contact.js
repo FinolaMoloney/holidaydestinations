@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import { useState } from 'react';
 import '../components/Contact.css';
-
+import holidayDestinationsLinkedInLogo from '../images/holidayDestinationsLinkedinLogo.png';
+import holidayDestinationsInstagramLogo from '../images/holidayDestinationsInstagramLogo.png'
 
 function Contact() {
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -73,10 +74,19 @@ function Contact() {
                 <button className="button" type="submit">Submit</button>
               </form>
               )}
+            
+            <div className="row ">
+              <h6>Contact Details</h6>
+                <p>
+                  Phone: +1221 345 7896<br/>
+                  Email: contact@holidaydestinations.com<br/>
+                  Address: 12 Baker Ln,<br/>O' Connell Street Lower,<br/>Dublin 1.
+                </p>
+              <h6>Find us on our socials!</h6>
+              <div><a href="https://www.linkedin.com"><img className="logos" src={holidayDestinationsLinkedInLogo} alt="LinkedIn Logo" /></a>
+              <a href="https://www.instagram.com"><img className="logos" src={holidayDestinationsInstagramLogo} alt="Instagram Logo" /></a>
+              </div>
             </div>
-            <div className="row">
-              <h6>You can also find us on our socials</h6>
-                  <p></p>
             </div>
         </div>
       </div>
