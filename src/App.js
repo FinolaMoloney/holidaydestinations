@@ -5,6 +5,7 @@ import Hotels from './views/Hotels';
 import Home from './views/Home';
 import Contact from './views/Contact'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
            <Contact />
           </Route>
         </Switch>
-
+        <Footer />
       </div>
     </Router>
   );

@@ -3,7 +3,6 @@ import axios from 'axios'
 import '../components/Hotel.css'
 import Rating from '../components/Rating.js'
 
-
 function Hotels(){
 
   //New York
@@ -76,30 +75,56 @@ function Hotels(){
     };
     londonImage();
   }, []);
-  //Milan
-  const [milanImage, setMilanImage] = useState("");
-  const [milan, setMilan] = useState([]);
-  //Milan hotels APIs
+  //Madrid
+  const [madridImage, setMadridImage] = useState("");
+  const [madrid, setMadrid] = useState([]);
+  //Madrid hotels APIs
   useEffect(() => {
-    fetch('https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=9.188540&lat=45.464664&kinds=other_hotels&apikey=5ae2e3f221c38a28845f05b6aab861f719c25d8c398372f720270a8d')
+    fetch('https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=-3.703790&lat=40.416775&kinds=other_hotels&apikey=5ae2e3f221c38a28845f05b6aab861f719c25d8c398372f720270a8d')
       .then(response => response.json())
-      .then(data => setMilan(data.features))
+      .then(data => setMadrid(data.features))
       .catch(error => console.log(error));
       
   }, []);
   //Filter for hotels 6 stars and up
-  const starLimitMilan  = milan.filter(milan => milan.properties.rate >2 ).slice(0, 5)
-  //Milan Image
+  const starLimitMadrid  = madrid.filter(madrid => madrid.properties.rate >2 ).slice(0, 5)
+  //Madrid Image
   useEffect (() => {
-    var milanImage = async function  () {
+    var madridImage = async function  () {
       var data = await axios.get(
-        "https://pixabay.com/api/?key=34130522-c8d0b465514edc5b70995405d&q=architecture-building-city&image_type=photo&id=5055472"
+        "https://pixabay.com/api/?key=34130522-c8d0b465514edc5b70995405d&q=madrid-spain-sunset-architecture&image_type=photo&id=2714570"
       );
    
-      setMilanImage(data.data.hits[0].webformatURL);
+      setMadridImage(data.data.hits[0].webformatURL);
     };
-    milanImage();
+    madridImage();
   }, []);
+
+    //Amsterdam
+    const [amsterdamImage, setAmsterdamImage] = useState("");
+    const [amsterdam, setAmsterdam] = useState([]);
+    //Amsterdam hotels APIs
+    useEffect(() => {
+      fetch('https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=4.897070&lat=52.377956&kinds=other_hotels&apikey=5ae2e3f221c38a28845f05b6aab861f719c25d8c398372f720270a8d')
+        .then(response => response.json())
+        .then(data => setAmsterdam(data.features))
+        .catch(error => console.log(error));
+        
+    }, []);
+    //Filter for hotels 6 stars and up
+    const starLimitAmsterdam = amsterdam.filter(amsterdam => amsterdam.properties.rate >6 ).slice(0, 5)
+    //Amsterdam Image
+    useEffect (() => {
+      var amsterdamImage = async function  () {
+        var data = await axios.get(
+          "https://pixabay.com/api/?key=34130522-c8d0b465514edc5b70995405d&q=amsterdam-europe-walk-vacation&image_type=photo&id=988047"
+        );
+     
+        setAmsterdamImage(data.data.hits[0].webformatURL);
+      };
+      amsterdamImage();
+    }, []);
+
   return (
     <div>
       <header className="header">
@@ -177,20 +202,43 @@ function Hotels(){
       </div>
       <br></br>
       <div className="row  gradient-1">
-        <h1>Hotels in Milan</h1>
+        <h1>Hotels in Madrid</h1>
           <div className="col-sm">
-          {milanImage && <img src={milanImage} alt="Milan" />}<a href= "https://pixabay.com/photos/architecture-building-city-5055472/"><br/><small>Source: https://pixabay.com/photos/architecture-building-city-5055472/</small></a>
+          {madridImage && <img src={madridImage} alt="Madrid" />}<a href= "https://pixabay.com/photos/madrid-spain-sunset-architecture-2714570/"><br/><small>Source: https://pixabay.com/photos/madrid-spain-sunset-architecture-2714570/</small></a>
           </div>
           <div className="col-sm">
-          {starLimitMilan.map((milan, index) => (
+          {starLimitMadrid.map((madrid, index) => (
             <div key={index}>
               <ul>
                 <li>
                   <h6>
-                    {milan.properties.name.toUpperCase()}
+                    {madrid.properties.name.toUpperCase()}
                   </h6>
                   <p className="rating">
-                    <Rating starRating={milan.properties.rate}/>
+                    <Rating starRating={madrid.properties.rate}/>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+      <br></br>
+      <div className="row  gradient-1">
+        <h1>Hotels in Amsterdam</h1>
+          <div className="col-sm">
+          {amsterdamImage && <img src={amsterdamImage} alt="Amsterdam" />}<a href= "https://pixabay.com/photos/amsterdam-europe-walk-vacation-988047/"><br/><small>Source: https://pixabay.com/photos/amsterdam-europe-walk-vacation-988047/</small></a>
+          </div>
+          <div className="col-sm">
+          {starLimitAmsterdam.map((amsterdam, index) => (
+            <div key={index}>
+              <ul>
+                <li>
+                  <h6>
+                    {amsterdam.properties.name.toUpperCase()}
+                  </h6>
+                  <p className="rating">
+                    <Rating starRating={amsterdam.properties.rate}/>
                   </p>
                 </li>
               </ul>
