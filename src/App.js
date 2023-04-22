@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route} from 'react-router-dom'
 import './App.css';
 import Hotels from './views/Hotels';
 import Home from './views/Home';
@@ -12,7 +12,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <Switch>
+        
           <Route exact path="/">
             <Home />
           </Route>
@@ -22,7 +22,7 @@ function App() {
           <Route path="/contact">
            <Contact />
           </Route>
-        </Switch>
+        
         <Footer />
       </div>
     </Router>
