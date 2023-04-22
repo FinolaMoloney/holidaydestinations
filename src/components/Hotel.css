@@ -11,17 +11,6 @@
     display:flex;
 }
 
-
 .header-title {
     color: black;
-}
-
-.rating {
-   text-indent: 1em;
-    font-size: 20px;
-}
-
-.gradient-1 {
-    background: linear-gradient(#f9f5f1, white);
-    margin:auto;
 }
