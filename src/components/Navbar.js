@@ -8,13 +8,16 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-			<a className="nav-link" href="/">Home</a>
-		  </li>
+						<a className="nav-link" href="/">Home</a>
+					</li>
           <li className="nav-item">
             <a className="nav-link" href="/hotels">Hotels</a>
           </li>
-		  <li className="nav-item">
-             <a className="nav-link" href="/flights">Flights</a>
+          <li className="nav-item">
+            <a className="nav-link" href="/Rental">Rentals</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="/Weather">Weather</a>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="/contact">Contact Us</a>
