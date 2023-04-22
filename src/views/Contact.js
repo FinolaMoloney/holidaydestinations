@@ -44,8 +44,8 @@ function Contact() {
                   <input 
                     type="text" 
                     className="form-control"
-                    placeholder="Last name" 
-                    {...register("lastName", { required: "Second Name is required" })} />
+                    placeholder="Last Name" 
+                    {...register("lastName", { required: "Last Name is required" })} />
                   {errors.lastName && (<small>{errors.lastName.message}</small>)}
                 </div>
                 <div>
@@ -54,7 +54,7 @@ function Contact() {
                     className="form-control"
                     placeholder="Email" 
                     {...register("email", {
-                      required: "A valid email is required", 
+                      required: "Email is required", 
                       pattern: {
                         value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i,
                         message: "A valid email is required"
