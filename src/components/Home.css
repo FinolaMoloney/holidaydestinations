@@ -1,12 +1,11 @@
-
-
-.Container {
-    margin: auto;
-    width: auto; 
-    padding: 50px;
+.body{
+    background-color: rgb(33, 37, 41);
+}
+.container-fluid {
     font-family: 'Avenir', sans-serif; 
     color: #33475b; 
     background-color: rgb(33, 37, 41);
+    padding-bottom: 25px;
     
 }
 

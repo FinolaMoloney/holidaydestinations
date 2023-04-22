@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Weather from './views/Weather'
 import Rental from './views/Rental'
+import Flights from './views/Flights';
 
 function App() {
   return (
@@ -15,20 +16,23 @@ function App() {
       <div>
         <Navbar />
         
-          <Route exact path="/">
+			<Route exact path="/">
             <Home />
           </Route>
-          <Route path="/hotels">
-           <Hotels />
+			<Route path="/hotels">
+			<Hotels />
           </Route>
-          <Route exact path="/Weather">
+			<Route exact path="/Weather">
             <Weather />
           </Route>
-          <Route exact path="/Rental">
+			<Route exact path="/Rental">
             <Rental />
+		  </Route>
+			<Route path="/flights">
+			<Flights />
           </Route>
-          <Route path="/contact">
-           <Contact />
+			<Route path="/contact">
+			<Contact />
           </Route>
         
         <Footer />
