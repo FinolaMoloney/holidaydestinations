@@ -1,3 +1,7 @@
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .row {
     margin-bottom: 20px;
     margin-top: 20px;
@@ -36,4 +40,10 @@
   .logos {
     height: 50px;
     width: 50px;
+  }
+
+  .contactBox {
+    background-image: linear-gradient(rgb(254, 241, 228), white) ;
+    border-radius: 8px;
+    
   }

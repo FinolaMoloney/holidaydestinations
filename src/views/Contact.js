@@ -21,7 +21,7 @@ function Contact() {
         <header className="headerContact">
           <h1 className="header-title">Contact Us</h1>
         </header>
-        <div className="container-fluid gradient-1">
+        <div className="container contactBox">
           <div className="contact-form">
             <div className="row">
               <p>If you would like to get in touch, please send us a message below. We would love to hear from you!</p>
@@ -75,7 +75,7 @@ function Contact() {
               </form>
               )}
             
-            <div className="row ">
+            <div className="row">
               <h6>Contact Details</h6>
                 <p>
                   Phone: +1221 345 7896<br/>

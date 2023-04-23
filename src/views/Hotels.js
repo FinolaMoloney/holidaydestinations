@@ -130,14 +130,14 @@ function Hotels(){
       <header className="headerId">
         <h1 className="header-title">Find your perfect City Break Hotel</h1>
       </header>
-      <div className="container-fluid hotels">
+      <div className="container">
         <p>Need hotel suggestions? You have come to the right place! See below a list of hotels for your city break destination. We've done the hard work for you and compiled a list of hotels in popular destinations. All you need to do is pick your favourite!!</p>
-        <div className="row gradient-1">
+        <div className="row card-body">
         <h1>Hotels in New York City</h1>
           <div className="col-sm">
             {newYorkCity && <img src={newYorkCity} alt="New York City" />}<a href= "https://pixabay.com/photos/buildings-skyline-city-cityscape-1850129/"><br/><small>Source: https://pixabay.com/photos/buildings-skyline-city-cityscape-1850129/</small></a>
           </div>
-          <div className="col-sm">
+          <div className="col-sm card-text">
           {starLimitNewYork.map((newYork, index) => (
           <div key={index} >
             <ul>
@@ -155,12 +155,12 @@ function Hotels(){
           </div>
         </div>
         <br></br>
-        <div className="row  gradient-1">
+        <div className="row card-body">
         <h1>Hotels in Paris</h1>
           <div className="col-sm">
           {parisImage && <img src={parisImage} alt="Paris" />}<a href= "https://pixabay.com/photos/london-city-heaven-clouds-cities-206118/"><br/><small>Source: https://pixabay.com/photos/london-city-heaven-clouds-cities-206118/</small></a>
           </div>
-          <div className="col-sm">
+          <div className="col-sm card-text">
           {starLimitParis.map((paris, index) => (
             <div key={index}>
               <ul>
@@ -178,12 +178,12 @@ function Hotels(){
         </div>
       </div>
       <br></br>
-      <div className="row  gradient-1">
+      <div className="row card-body">
         <h1>Hotels in London</h1>
           <div className="col-sm">
           {londonImage && <img src={londonImage} alt="London" />}<a href= "https://pixabay.com/photos/eiffel-tower-paris-france-3349075/"><br/><small>Source: https://pixabay.com/photos/eiffel-tower-paris-france-3349075/</small></a>
           </div>
-          <div className="col-sm">
+          <div className="col-sm card-text">
           {starLimitLondon.map((london, index) => (
             <div key={index}>
               <ul>
@@ -201,12 +201,12 @@ function Hotels(){
         </div>
       </div>
       <br></br>
-      <div className="row  gradient-1">
+      <div className="row card-body">
         <h1>Hotels in Madrid</h1>
           <div className="col-sm">
           {madridImage && <img src={madridImage} alt="Madrid" />}<a href= "https://pixabay.com/photos/madrid-spain-sunset-architecture-2714570/"><br/><small>Source: https://pixabay.com/photos/madrid-spain-sunset-architecture-2714570/</small></a>
           </div>
-          <div className="col-sm">
+          <div className="col-sm card-text">
           {starLimitMadrid.map((madrid, index) => (
             <div key={index}>
               <ul>
@@ -224,12 +224,12 @@ function Hotels(){
         </div>
       </div>
       <br></br>
-      <div className="row  gradient-1">
+      <div className="row card-body">
         <h1>Hotels in Amsterdam</h1>
           <div className="col-sm">
           {amsterdamImage && <img src={amsterdamImage} alt="Amsterdam" />}<a href= "https://pixabay.com/photos/amsterdam-europe-walk-vacation-988047/"><br/><small>Source: https://pixabay.com/photos/amsterdam-europe-walk-vacation-988047/</small></a>
           </div>
-          <div className="col-sm">
+          <div className="col-sm card-text">
           {starLimitAmsterdam.map((amsterdam, index) => (
             <div key={index}>
               <ul>

@@ -1,3 +1,7 @@
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .headerId {
     background-image: url('../images/city-break-hotels-background.jpg');
     background-size: cover;
@@ -20,17 +24,10 @@
    text-indent: 1em;
     font-size: 20px;
 }
-
-.gradient-1 {
-    background: linear-gradient(#f9f5f1, white);
-    margin:auto;
+.card-body {
+    background-color: white;  
 }
 
-.containter-fluid {
-    background: white;
-    color: white;
-}
-
-.hotels {
-    background-color: white;
+.card-text {
+    text-align: left;
 }
