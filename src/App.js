@@ -13,7 +13,7 @@ import Flights from './views/Flights';
 function App() {
   return (
     <Router>
-      <div className='root'>
+      <div>
         <Navbar />
         
 			<Route exact path="/">
