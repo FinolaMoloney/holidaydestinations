@@ -1,4 +1,4 @@
-.header {
+.headerId {
     background-image: url('../images/city-break-hotels-background.jpg');
     background-size: cover;
     background-position: center;
@@ -24,4 +24,13 @@
 .gradient-1 {
     background: linear-gradient(#f9f5f1, white);
     margin:auto;
+}
+
+.containter-fluid {
+    background: white;
+    color: white;
+}
+
+.hotels {
+    background-color: white;
 }

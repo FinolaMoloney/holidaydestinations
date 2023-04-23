@@ -71,7 +71,7 @@ function Contact() {
                   {errors.message && (<small>{errors.message.message}</small>)}
                 </div>
                 <br></br>
-                <button className="button" type="submit">Submit</button>
+                <button className="buttonType" type="submit">Submit</button>
               </form>
               )}
             
