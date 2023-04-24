@@ -11,6 +11,7 @@ function Home() {
           <Link to="/hotels">
             <img
               className="d-block mx-auto img-fluid"
+              href="/hotels"
               src={'./hotels.jpg'}
               alt="Hotel slide"
             />
@@ -25,6 +26,7 @@ function Home() {
           <Link to="/rental">
             <img
               className="d-block mx-auto img-fluid"
+              href="/Rental"
               src={'./cars.png'}
               alt="Cars slide"
             />
@@ -39,6 +41,7 @@ function Home() {
           <Link to="/weather">
             <img
               className="d-block mx-auto img-fluid"
+              href="/Weather"
               src={'./weather.jpg'}
               alt="Weather slide"
             />
@@ -53,6 +56,7 @@ function Home() {
           <Link to="/flights">
             <img
               className="d-block mx-auto img-fluid"
+              href="/flights"
               src={'./Flights.jpg'}
               alt="Flights slide"
             />
