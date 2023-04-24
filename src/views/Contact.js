@@ -83,7 +83,7 @@ function Contact() {
                 Address: 12 Baker Ln,<br/>O' Connell Street Lower,<br/>Dublin 1.
                 </p>
               <h6>Find us on our socials!</h6>
-              <div><br /><br /><a href="https://www.linkedin.com"><img className="logos" src={holidayDestinationsLinkedInLogo} alt="LinkedIn Logo" /></a>
+              <div><br /><a href="https://www.linkedin.com"><img className="logos" src={holidayDestinationsLinkedInLogo} alt="LinkedIn Logo" /></a>
               <a href="https://www.instagram.com"><img className="logos" src={holidayDestinationsInstagramLogo} alt="Instagram Logo" /></a>
               </div>
             </div>

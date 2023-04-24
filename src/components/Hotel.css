@@ -24,9 +24,13 @@ body, html {
     font-size: 20px;
 }
 .card-body {
-    background-color: white;  
+    background-color: white; 
 }
 
 .card-text {
+    text-align: left;
+}
+
+.card-title{
     text-align: left;
 }
