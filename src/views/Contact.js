@@ -21,7 +21,7 @@ function Contact() {
         <header className="headerContact">
           <h1 className="header-title">Contact Us</h1>
         </header>
-        <div className="container contactBox">
+        <div className="container">
           <div className="contact-form">
             <div className="row">
               <p>If you would like to get in touch, please send us a message below. We would love to hear from you!</p>
@@ -31,7 +31,7 @@ function Contact() {
                   <p>Thanks for getting in touch {userfName}, we will get back to you on {userEmail} shortly!</p>
                 </div>
               ) : (
-              <form onSubmit={handleSubmit(onSubmit)}>
+              <form className="contactForm" onSubmit={handleSubmit(onSubmit)}>
                 <div>
                   <input 
                     type="text" 
@@ -76,14 +76,14 @@ function Contact() {
               )}
             
             <div className="row">
-              <h6>Contact Details</h6>
-                <p>
-                  Phone: +1221 345 7896<br/>
-                  Email: contact@holidaydestinations.com<br/>
-                  Address: 12 Baker Ln,<br/>O' Connell Street Lower,<br/>Dublin 1.
+              <h6><br />Contact Details</h6>
+                <p><br />
+                Phone: +1221 345 7896<br/>
+                Email: contact@holidaydestinations.com<br/>
+                Address: 12 Baker Ln,<br/>O' Connell Street Lower,<br/>Dublin 1.
                 </p>
               <h6>Find us on our socials!</h6>
-              <div><a href="https://www.linkedin.com"><img className="logos" src={holidayDestinationsLinkedInLogo} alt="LinkedIn Logo" /></a>
+              <div><br /><br /><a href="https://www.linkedin.com"><img className="logos" src={holidayDestinationsLinkedInLogo} alt="LinkedIn Logo" /></a>
               <a href="https://www.instagram.com"><img className="logos" src={holidayDestinationsInstagramLogo} alt="Instagram Logo" /></a>
               </div>
             </div>
