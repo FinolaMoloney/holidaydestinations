@@ -2,26 +2,35 @@
     background-color: rgb(33, 37, 41);
 }
 .container-fluid {
-    font-family: 'Avenir', sans-serif; 
+    font-family: Arial, Helvetica, sans-serif; 
     color: #33475b; 
     background-color: rgb(33, 37, 41);
-    padding-bottom: 20px;
+    padding-bottom: 60px;
     
 }
-body {
-    margin: 0;
-    padding: 0;
-    background-color: rgb(33, 37, 41);
-  }
+
 
 
 .h3 {
-    border: 3px solid green;
-    font-family: 'Avenir', sans-serif; 
+    font-family: Arial, Helvetica, sans-serif; 
     color: #33475b; 
 }
 
 .Carousel.Item {
     box-shadow: 0px 0px 10px rgba(67, 253, 0, 0.2);
   }
+
+  /* default font size */
+font-size: 16px;
+
+/* media query for smaller screens */
+@media (max-width: 768px) {
+  font-size: 14px;
+}
+
+/* media query for even smaller screens */
+@media (max-width: 480px) {
+  font-size: 12px;
+}
+
   

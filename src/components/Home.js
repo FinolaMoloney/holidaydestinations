@@ -15,12 +15,11 @@ function Home() {
               alt="Hotel slide"
             />
             <Carousel.Caption>
-              <h3>Hotels</h3>
-              <p>City Break Hotels</p>
+              <h3>Holiday Hotels</h3>
+              <p>Find a place to stay</p>
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
-
         <Carousel.Item>
           <Link to="/rental">
             <img
@@ -29,12 +28,11 @@ function Home() {
               alt="Cars slide"
             />
             <Carousel.Caption>
-              <h3>Car Rentals</h3>
-              <p>City Break Car Rentals</p>
+              <h3>Holiday Car Rentals</h3>
+              <p>Find a Car, But We Can't Drive it for You!</p>
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
-
         <Carousel.Item>
           <Link to="/weather">
             <img
@@ -43,12 +41,11 @@ function Home() {
               alt="Weather slide"
             />
             <Carousel.Caption>
-              <h3>Weather</h3>
-              <p>City Break Weather</p>
+              <h3>Holiday Weather</h3>
+              <p>We can't guarantee it, but you can always check.</p>
             </Carousel.Caption>
           </Link>
         </Carousel.Item>
-
         <Carousel.Item>
           <Link to="/flights">
             <img
@@ -57,8 +54,8 @@ function Home() {
               alt="Flights slide"
             />
             <Carousel.Caption>
-              <h3>Flights</h3>
-              <p>Find City Break Flights</p>
+              <h3>Holiday Flights</h3>
+              <p>Find the Cheapest Flights</p>
             </Carousel.Caption>
           </Link>
         </Carousel.Item>

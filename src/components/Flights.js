@@ -20,10 +20,9 @@ class Flights extends React.Component {
     return (
       <div>
       <header className="headerIdf">
-        <h1 className="header-title">City Break Flights</h1>
+        <h1 className="header-title">Find your perfect City Break Hotel</h1>
       </header>
       <div className="container">
-        <h1>Flights from Dublin </h1>
         <div className="row">
           {this.state.prices.map((price, index) => (
             <div className="col-sm-6 col-md-4 col-lg-4 mb-4" key={index}>
@@ -40,7 +39,6 @@ class Flights extends React.Component {
         </div>
       </div>
       </div>
-
     );
   }
   
