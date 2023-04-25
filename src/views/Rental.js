@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import './styles.css';
 
+
 const Rental = () => {
   const [city, setcity] = useState("Paris");
-  const [pickUpDate, setPickUpDate]=useState("2023-05-20");
-  const [dropOffDate, setDropOffDate]=useState("2023-05-30");
+  const [pickUpDate, setPickUpDate]=useState("2023-06-10");
+  const [dropOffDate, setDropOffDate]=useState("2023-06-30");
   
   const [results, setResults] = useState([]);
+  const [spinner, setSpinner] = useState(false); 
   
 
   useEffect(() => {
@@ -21,18 +23,23 @@ const Rental = () => {
     };
 
     const search = async () => {
+      setSpinner(true);
         
       //console.log("City: ", city);
       //fetch('https://booking-com.p.rapidapi.com/v1/car-rental/search?currency=AED&drop_off_latitude=50.08773&sort_by=recommended&drop_off_datetime=2023-06-30%2016%3A00%3A00&from_country=it&pick_up_latitude=50.08773&locale=en-gb&pick_up_datetime=2023-06-29%2016%3A00%3A00&drop_off_longitude=14.421133&pick_up_longitude=14.421133', options)
       //fetch(`https://booking-com.p.rapidapi.com/v1/car-rental/search?currency=EUR&drop_off_latitude=50.08773&sort_by=recommended&drop_off_datetime=${dropOffDate}%2016%3A00%3A00&from_country=it&pick_up_latitude=50.08773&locale=en-gb&pick_up_datetime=${pickUpDate}%2016%3A00%3A00&drop_off_longitude=14.421133&pick_up_longitude=14.421133`, options)
-      fetch(`https://booking-com.p.rapidapi.com/v1/car-rental/search?currency=EUR&drop_off_latitude=48.864716&sort_by=recommended&drop_off_datetime=${dropOffDate}%2016%3A00%3A00&from_country=it&pick_up_latitude=48.864716&locale=en-gb&pick_up_datetime=${pickUpDate}%2016%3A00%3A00&drop_off_longitude=2.349014&pick_up_longitude=2.349014`, options)
+      await fetch(`https://booking-com.p.rapidapi.com/v1/car-rental/search?currency=EUR&drop_off_latitude=48.864716&sort_by=recommended&drop_off_datetime=${dropOffDate}%2016%3A00%3A00&from_country=it&pick_up_latitude=48.864716&locale=en-gb&pick_up_datetime=${pickUpDate}%2016%3A00%3A00&drop_off_longitude=2.349014&pick_up_longitude=2.349014`, options)
       .then(response => response.json())
       .then(response => {
         //console.log("Car rental fetch response::",response)
         //console.log("Car rental fetch response::",response.search_results[0].supplier_info.logo_url)
         setResults(response.search_results);
+        setSpinner(false);
         })
-      .catch(err => console.error(err));
+      .catch(err => {
+        console.error(err);
+        setResults(null);
+      });
 
     };
 
@@ -41,15 +48,15 @@ const Rental = () => {
       search();
     // else throttle search requests with timer  
     } else {
-      // wait 500ms before executing search
+      // Before execuring search, it needs to wait 500ms
       let timeoutID = setTimeout(() => {
-        // do not search if input is empty
+        // If the input is empty, then search do not proceed
         if (city) {
           search();
         }
       }, 500);
 
-      // CLEANUP: clear current timer
+      // CLEANUP: to cleanup the timer
       return () => {
         clearTimeout(timeoutID);
       };
@@ -71,7 +78,7 @@ const Rental = () => {
                 <p>{result.vehicle_info.mileage}</p>
               </div>  
               <div className = "col-lg-4 ">
-                <p className="smallText">Price for 1 day:</p>
+                <p className="smallText">Total Price:</p>
                 <p className="carPrice">€{result.pricing_info.price}</p>  
                 <p className="cancelPolicy">Free Cancellation</p>
                 <button className="bookButton">Book</button>
@@ -103,26 +110,42 @@ const Rental = () => {
   });
 
   return (
-    <div >
-      <div className="rentalInput rentalForm">
-        
+    <div  >
+
+      <div className="rentalInput rentalForm">        
         <p className="carName">We help you find the best Cars for your trip - We make your trip more memorable</p>
         <div className="inField">
             <label>Rental City:&nbsp;&nbsp;</label>
-                <input className="input"
+                <input className="input" 
                 value={city}
                 onChange={(e) => setcity(e.target.value)} disabled
             />
             <label >&nbsp;&nbsp;&nbsp;&nbsp;Pick-up Date:&nbsp;&nbsp;</label>
-            <input type="date" id="startDate"  value={pickUpDate} min="2023-04-23" max="2023-12-23" onChange={(e) => setPickUpDate(e.target.value)} />
+            <input type="date" id="startDate"  value={pickUpDate} min="2023-06-10" max="2023-12-23" disabled />
             <label >&nbsp;&nbsp;&nbsp;&nbsp;Drop-Off Date:&nbsp;&nbsp;</label>
-            <input type="date" id="endDate"  value={dropOffDate} min="2023-04-24" max="2023-12-23" onChange={(e) => setDropOffDate(e.target.value)} />
+            <input type="date" id="endDate"  value={dropOffDate} min="2023-06-30" max="2023-12-23" onChange={(e) => setDropOffDate(e.target.value)} />
         </div>
+        
       </div>
-      <div className="row ">
 
-      <div>{searchResultsMapped}</div>
+      <div >
+      {(spinner) ? (
+        <div className="rentalBg">
+            
+            <div className="searchLoading">            
+              <br></br>
+            <p>Searching for Top Car Rental deals!</p>
+            <p>Please WAIT....</p>
+            <p>Search may take few minutes</p>
+            <img src="../images/car/Loading_icon.gif" alt="alt text" className="out-of-screen"></img>
+            
+            </div>
+        </div>
+        ):( 
+          <div>{searchResultsMapped}</div>
+        )}
       </div>
+
     </div>
   );
 };

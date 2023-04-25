@@ -20,31 +20,6 @@ body, html {
     
   }
 
-.main{
-    width: 700px;
-    margin: 25px;
-    border-radius: 20px;
-    background-color: #01579b;
-    background-image: url('../images/weather/weatherBackground.jpg') ;
-    background-size: 'cover';
-    background-repeat: 'no-repeat';
-    display: block;
-
-}
-
-
-
-.top{
-    height: 60px;
-    background-color: #424242;
-    color: whitesmoke;
-    padding: 10px;
-    border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
-    display: flex;
-    justify-content: space-between;
-}
-
 .destination{
     color: white;
     font-family: 'Recursive', sans-serif;
@@ -95,6 +70,14 @@ body, html {
     text-align: center;
 
 }
+
+.weatherInfoLabel{
+    font-weight: bolder;
+    color:rgb(1, 1, 27);
+}
+
+
+
 
 .header{
     background-color: #424242;
@@ -169,7 +152,7 @@ body, html {
     font-family: "Arial", sans-serif;	
     font-size: 14px; color: black; font-weight: bold;	
     background-color: white; 
-    box-shadow: 1px 1px 5px 2px #867979;
+    box-shadow: 1px 1px 5px 2px #498ee7;
     	
     justify-content: center; text-align: left;
     
@@ -177,8 +160,8 @@ body, html {
 
 .rentalForm{
     color: white;
-    background-color: #9b4601;
-    background-image: url('../images/car/sc1.jfif');   
+    /*background-color: #9b4601;*/
+    background-image: url('../images/car/eiffle-tip.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,23 +170,36 @@ body, html {
 
 }
 
+
+
 .rentalBg{
-    background-color: #9b4601;
-    background-image: url('../images/car/c1.jpg')  ;   
+    color: white;
+    background-image: url('../images/car/paris.jpg') ;  
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    
-
+    min-height: 1020px;
+    text-align: center;
 }
 
 
+.searchLoading{
+    padding-top: 200px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;    
 
+}
 
+.out-of-screen {
+    position:absolute;
+    top:-2000em;
+}
 
 .carName{
 
-    color: rgb(6, 1, 22);
+    color: rgb(37, 2, 32);
     font-family: 'Recursive', sans-serif;
     font-size: 25px;
     font-weight: bold;    
@@ -241,11 +237,21 @@ body, html {
     
 }
 
+
 .carItem{
-    border: 5px solid;
-    
+    color: black;
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: left;
+    box-shadow: 1px 15px 15px 1px rgba(84, 84, 85, 0.5);
     border-radius: 3px;
-    border-color: rgb(236, 231, 231);     
+    border-color: rgb(84, 14, 14);     
+}
+
+.card-body{
+    font-family: Arial, Helvetica, sans-serif; 
+    text-align: center;
+    box-shadow: 0px 15px 15px -8px rgba(0,0,0,0.5)
+    
 }
 
 .bookButton{
