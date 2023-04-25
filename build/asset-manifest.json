@@ -1,17 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.04d33edd.js",
+    "main.css": "/static/css/main.0c90b435.css",
+    "main.js": "/static/js/main.23a055ce.js",
     "static/js/787.addaddd7.chunk.js": "/static/js/787.addaddd7.chunk.js",
+    "static/media/blue.jpg": "/static/media/blue.39df7476b2c64612e341.jpg",
+    "static/media/contact-background.png": "/static/media/contact-background.68805dae2b6782de62b4.png",
+    "static/media/sc1.jfif": "/static/media/sc1.d4bb131de94b243c5631.jfif",
+    "static/media/beach.jpg": "/static/media/beach.dda4ec649e19e43f5786.jpg",
+    "static/media/paris.jpg": "/static/media/paris.05878cd18e033762c516.jpg",
+    "static/media/city-break-hotels-background.jpg": "/static/media/city-break-hotels-background.6eed858f4969c55a39e8.jpg",
+    "static/media/flightsback.jpg": "/static/media/flightsback.a448d0abefc9934549af.jpg",
     "service-worker.js": "/service-worker.js",
-    "static/media/logo.svg": "/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "static/media/holidayDestinationsInstagramLogo.png": "/static/media/holidayDestinationsInstagramLogo.82245cf7ae3d728b4bb3.png",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.04d33edd.js.map": "/static/js/main.04d33edd.js.map",
+    "main.0c90b435.css.map": "/static/css/main.0c90b435.css.map",
+    "main.23a055ce.js.map": "/static/js/main.23a055ce.js.map",
     "787.addaddd7.chunk.js.map": "/static/js/787.addaddd7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.04d33edd.js"
+    "static/css/main.0c90b435.css",
+    "static/js/main.23a055ce.js"
   ]
 }
