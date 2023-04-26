@@ -127,8 +127,8 @@ function Hotels(){
 
   return (
     <div>
-      <header className="headerId">
-        <h1 className="header-title">Find your perfect City Break Hotel</h1>
+      <header className="headerBanner">
+        <h1>Find your perfect City Break Hotel</h1>
       </header>
       <div className="container">
         <p>Need hotel suggestions? You have come to the right place! See below a list of hotels for your city break destination. We've done the hard work for you and compiled a list of hotels in popular destinations. All you need to do is pick your favourite!!</p>
