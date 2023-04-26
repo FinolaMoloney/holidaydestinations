@@ -1,0 +1,12 @@
+describe('Testing the functionality of the contact form', () => {
+  beforeEach(() => {
+    cy.visit('http://localhost:3000/contact'); 
+  });
+  it('test omitting the message field', () => {
+    cy.get('input[name="name"]').type('Tom');
+    cy.get('input[name="lastName"]').type('Kelly');
+    cy.get('input[name="email"]').type('tom.kelly@example.com');
+    cy.get('button[type="submit"]').click();
+    cy.contains('Enter your message before submitting');
+  });
+});

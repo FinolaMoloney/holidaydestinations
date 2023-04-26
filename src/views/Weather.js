@@ -24,7 +24,7 @@ function Weather() {
       })
       .then((res) => {
         setData(res.main);
-        //console.log("getTempData-res", res)
+        console.log("getTempData-res", res)
   
         setCity(destination);
         setSys(res.sys);

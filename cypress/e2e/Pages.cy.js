@@ -26,9 +26,5 @@ it('Testing all the pages work', () => {
   cy.contains('Contact Us').click()
   cy.location('pathname').should('eq', '/contact')
   cy.go('back')
-
-
-
-
-
+  cy.log('This test has sucessfully tested opening all pages.');
 });

@@ -51,5 +51,6 @@ describe('Testing the functionality of the contact form', () => {
     cy.get('input[name="email"]').type('tom.kelly@example.com');
     cy.get('button[type="submit"]').click();
     cy.contains('Enter your message before submitting');
+    cy.log('This test has sucessfully tested the contact us page.');
   });
 });
