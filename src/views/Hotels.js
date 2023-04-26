@@ -127,7 +127,7 @@ function Hotels(){
 
   return (
     <div>
-      <header className="headerBanner">
+      <header className="headerBanner" id="back">
         <h1>Find your perfect City Break Hotel</h1>
       </header>
       <div className="container">
@@ -246,7 +246,9 @@ function Hotels(){
           ))}
         </div>
       </div>
-      <br></br>
+      <div class="row">
+				<div class="col"><a href="#back">Back to Top</a></div>
+			</div>
       </div>
     </div>
   );

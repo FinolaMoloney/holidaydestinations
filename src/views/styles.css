@@ -22,7 +22,7 @@ body, html {
 
 .destination{
     color: white;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     padding: 10px;
     width: 700px;
@@ -41,7 +41,7 @@ body, html {
     color: whitesmoke;
     padding: 10px;
     border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -52,7 +52,7 @@ body, html {
     padding: 5px;
     margin: 25px;
     color: white;    
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-weight: bolder;
     text-align: center;
@@ -85,13 +85,13 @@ body, html {
     margin: 10px 0px 0px 10px;
     font-size: 25px;
     border-radius: 20px 20px 0 0;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .day{
     padding: 15px;
     color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 600;
 }
@@ -99,7 +99,7 @@ body, html {
 .temp{
     padding: 15px;
     color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
 
@@ -111,7 +111,7 @@ body, html {
 .sunrise-sunset{
     padding: 15px;
     color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
 }
 
@@ -120,7 +120,7 @@ body, html {
 .description{
     padding: 15px;
     color: whitesmoke;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 24px;
     font-weight: 600;
 }
@@ -149,7 +149,7 @@ body, html {
     padding: 15px;	
     border: 0px solid;	
     border-radius: 2px; 
-    font-family: "Arial", sans-serif;	
+    font-family: Arial, Helvetica, sans-serif;	
     font-size: 14px; color: black; font-weight: bold;	
     background-color: white; 
     box-shadow: 1px 1px 5px 2px #498ee7;
@@ -200,7 +200,7 @@ body, html {
 .carName{
 
     color: rgb(37, 2, 32);
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     font-weight: bold;    
 }
@@ -221,13 +221,13 @@ body, html {
 .smallText{
     font-size: 10px;
     font-weight: lighter;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color:rgb(6, 1, 22);
 }
 
 .address{
     font-size: 10px;
-    font-family: 'Recursive', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 
