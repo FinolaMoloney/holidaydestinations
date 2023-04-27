@@ -31,7 +31,7 @@ function Contact() {
                   <p>Thanks for getting in touch {userfName}, we will get back to you on {userEmail} shortly!</p>
                 </div>
               ) : (
-              <form className="contactForm" onSubmit={handleSubmit(onSubmit)}>
+              <form className="contactFormBorder" onSubmit={handleSubmit(onSubmit)}>
                 <div>
                   <input 
                     type="text" 
